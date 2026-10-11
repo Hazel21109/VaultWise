@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultWise — Smart Personal Finance & Saving Strategies</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Separate CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-vault"></i> Vault<span>Wise</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#tips">Strategies</a>
+                <a href="#calculator">Savings Overview</a>
+                <a href="#challenge">52-Week Challenge</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="#calculator" class="btn btn-primary nav-cta">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge"><i class="fa-solid fa-sparkles"></i> Build Your Financial Freedom</span>
+            <h1>Master Your Money, Secure Your Future</h1>
+            <p>Practical strategies, budgeting frameworks, and actionable tips to help you build wealth, eliminate unnecessary spending, and achieve your dreams.</p>
+            <div class="hero-buttons">
+                <a href="#calculator" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> View Savings Guide</a>
+                <a href="#tips" class="btn btn-outline"><i class="fa-solid fa-lightbulb"></i> Explore Tips</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <h3>$4,800+</h3>
+                <p>Average Annual Savings</p>
+            </div>
+            <div class="stat-card">
+                <h3>50/30/20</h3>
+                <p>Budget Rule Framework</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Free Guidance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Breakdown / Static Calculator Showcase -->
+    <section id="calculator" class="calculator-section">
+        <div class="section-title">
+            <h2>Monthly Savings Breakdown</h2>
+            <p>See how consistent monthly contributions compound over a 3-year timeline.</p>
+        </div>
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <h3>Goal Parameters</h3>
+                <div class="input-group">
+                    <label>Goal Name</label>
+                    <input type="text" value="Emergency Fund / Cushion" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Monthly Deposit</label>
+                    <input type="text" value="$300 / month" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Time Horizon</label>
+                    <input type="text" value="3 Years (36 Months)" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Estimated Annual Return (HYSA)</label>
+                    <input type="text" value="4.5% APY" readonly>
+                </div>
+            </div>
+            <div class="calculator-results">
+                <h3>Projection Summary</h3>
+                <div class="result-box">
+                    <span class="result-label">Total Projected Value</span>
+                    <h2>$11,364</h2>
+                </div>
+                <div class="result-breakdown">
+                    <div class="breakdown-item">
+                        <span>Principal Contributed:</span>
+                        <strong>$10,800</strong>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Interest Earned:</span>
+                        <strong class="highlight-green">+$564</strong>
+                    </div>
+                </div>
+                <div class="info-badge">
+                    <i class="fa-solid fa-circle-info"></i> Compound growth makes your money work harder for you automatically.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pure CSS Filterable Savings Tips Section -->
+    <section id="tips" class="tips-section">
+        <div class="section-title">
+            <h2>Smart Money Strategies</h2>
+            <p>Explore proven tactics across daily habits, bills, and lifestyle adjustments.</p>
+        </div>
+        
+        <!-- Hidden Radio Inputs for Pure CSS Filtering -->
+        <input type="radio" name="filter" id="filter-all" class="filter-radio" checked>
+        <input type="radio" name="filter" id="filter-daily" class="filter-radio">
+        <input type="radio" name="filter" id="filter-bills" class="filter-radio">
+        <input type="radio" name="filter" id="filter-lifestyle" class="filter-radio">
+
+        <!-- Filter Labels styled as Buttons -->
+        <div class="filter-buttons">
+            <label for="filter-all" class="filter-btn">All Tips</label>
+            <label for="filter-daily" class="filter-btn">Daily Habits</label>
+            <label for="filter-bills" class="filter-btn">Bills & Utilities</label>
+            <label for="filter-lifestyle" class="filter-btn">Lifestyle</label>
+        </div>
+
+        <div class="tips-grid">
+            <!-- Tip 1 (Daily) -->
+            <div class="tip-card" data-category="daily">
+                <div class="tip-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                <span class="tip-tag">Daily Habits</span>
+                <h3>The 48-Hour Rule</h3>
+                <p>Wait 48 hours before making any non-essential online purchase to eliminate impulse buying regrets.</p>
+                <div class="tip-saving">Est. Savings: <strong>$150 / mo</strong></div>
+            </div>
+            <!-- Tip 2 (Bills) -->
+            <div class="tip-card" data-category="bills">
+                <div class="tip-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <span class="tip-tag">Bills & Utilities</span>
+                <h3>Audit Subscription Services</h3>
+                <p>Review bank statements every month and cancel streaming services or apps you haven't used in 30 days.</p>
+                <div class="tip-saving">Est. Savings: <strong>$60 / mo</strong></div>
+            </div>
+            <!-- Tip 3 (Lifestyle) -->
+            <div class="tip-card" data-category="lifestyle">
+                <div class="tip-icon"><i class="fa-solid fa-utensils"></i></div>
+                <span class="tip-tag">Lifestyle</span>
+                <h3>Meal Prep & Grocery Planning</h3>
+                <p>Plan your weekly meals ahead of time and create a strict shopping list to drastically cut dining out costs.</p>
+                <div class="tip-saving">Est. Savings: <strong>$300 / mo</strong></div>
+            </div>
+            <!-- Tip 4 (Daily) -->
+            <div class="tip-card" data-category="daily">
+                <div class="tip-icon"><i class="fa-solid fa-bolt"></i></div>
+                <span class="tip-tag">Daily Habits</span>
+                <h3>Energy & Utility Optimization</h3>
+                <p>Unplug phantom vampire electronics, switch to LED bulbs, and adjust your thermostat by 2 degrees.</p>
+                <div class="tip-saving">Est. Savings: <strong>$45 / mo</strong></div>
+            </div>
+            <!-- Tip 5 (Bills) -->
+            <div class="tip-card" data-category="bills">
+                <div class="tip-icon"><i class="fa-solid fa-percent"></i></div>
+                <span class="tip-tag">Bills & Utilities</span>
+                <h3>Negotiate Recurring Bills</h3>
+                <p>Call internet, phone, and insurance providers annually to request loyalty discounts or switch to lower plans.</p>
+                <div class="tip-saving">Est. Savings: <strong>$50 / mo</strong></div>
+            </div>
+            <!-- Tip 6 (Lifestyle) -->
+            <div class="tip-card" data-category="lifestyle">
+                <div class="tip-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <span class="tip-tag">Lifestyle</span>
+                <h3>The Generic Brand Switch</h3>
+                <p>Opt for store-brand groceries, medicines, and household supplies which are often identical in quality.</p>
+                <div class="tip-saving">Est. Savings: <strong>$80 / mo</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 52-Week Challenge Section -->
+    <section id="challenge" class="challenge-section">
+        <div class="challenge-box">
+            <div class="challenge-info">
+                <span class="badge">Gamified Savings</span>
+                <h2>The 52-Week Savings Challenge</h2>
+                <p>Save incrementally starting with just $1 on week one, scaling up to $52 on the final week. By the end of the year, you will effortlessly stack up over <strong>$1,300</strong> in savings!</p>
+                <ul class="challenge-benefits">
+                    <li><i class="fa-solid fa-check-circle"></i> Builds long-term financial discipline</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Starts small so anyone can participate</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Perfect for holiday funds or vacations</li>
+                </ul>
+            </div>
+            <div class="challenge-visual">
+                <div class="piggy-card">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    <h3>Total Year-End Goal</h3>
+                    <div class="goal-amount">$1,378.00</div>
+                    <p>Start today and watch your cushion grow week by week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Got questions about budgeting? We've got answers.</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>What is the 50/30/20 budget rule?</h3>
+                <p>It’s a simple budgeting framework where 50% of your net income goes to Needs (rent, groceries, bills), 30% to Wants (dining out, entertainment), and 20% directly to Savings and debt repayment.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How much should my emergency fund be?</h3>
+                <p>Financial experts generally recommend saving 3 to 6 months' worth of essential living expenses in a high-yield savings account for ultimate peace of mind.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Where should I keep my savings?</h3>
+                <p>Keep short-term savings and emergency funds in an accessible High-Yield Savings Account (HYSA) so your money earns competitive interest while remaining fully liquid.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-vault"></i> Vault<span>Wise</span>
+            </a>
+            <p>&copy; 2026 VaultWise. Empowering your financial future.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
